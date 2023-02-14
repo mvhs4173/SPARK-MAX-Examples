@@ -16,7 +16,7 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class Robot extends TimedRobot {
-  private static final int deviceID = 1;
+  private static final int deviceID = 52;
   private CANSparkMax m_motor;
   private SparkMaxPIDController m_pidController;
   private RelativeEncoder m_encoder;
@@ -45,8 +45,8 @@ public class Robot extends TimedRobot {
     m_encoder = m_motor.getEncoder();
 
     // PID coefficients
-    kP = 0.1; 
-    kI = 1e-4;
+    kP = 0.01; 
+    kI = 0;
     kD = 1; 
     kIz = 0; 
     kFF = 0; 
